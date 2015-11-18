@@ -4282,7 +4282,7 @@ int  lineno;
             if (*tmpbuf=='F') tcap = SETAF;
             else tcap = SETAB;
 
-            strcat(dest, tparm(tcap, colnum));
+            strcat(dest, tiparm(tcap, colnum));
         }
         else return(0);
 
