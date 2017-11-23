@@ -3478,8 +3478,8 @@ int iscrypted;
 
                         if ((notefile = fopen(filepath, "a")) != NULL) {
                             now = time(NULL);
-                            fprintf(notefile,"## %s %s [%.24s]\n",
-                                    urlnew->urls, urlnew->source, ctime(&now));
+                            fprintf(notefile,"## [%.24s] %s\n%s\n",
+                                    ctime(&now), urlnew->source, urlnew->urls);
                             fclose(notefile);
                             urlnum++;
                         }
