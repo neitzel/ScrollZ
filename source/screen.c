@@ -688,7 +688,7 @@ display_text(ustr, length)
 #ifdef WANTANSI
                                 else if ((*str == '\033') && (len == 1)) {
                                     int ansi_count = 0;
-                                    char *orig_str = str;
+                                    const char *orig_str = str;
 
                                     if (outptr >= OutBuf + sizeof(OutBuf)) {
                                         /* flush a block */
